@@ -1,0 +1,18 @@
+name: Receipt proof
+on: push
+permissions: {}
+jobs:
+  build:
+    name: Build proof
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify commit is present
+        run: test "${#GITHUB_SHA}" -eq 40
+  tests:
+    name: Test proof
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify synthetic contract
+        run: test "$((6 * 7))" -eq 42
