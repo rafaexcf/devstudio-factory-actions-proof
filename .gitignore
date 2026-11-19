@@ -1,0 +1,18 @@
+# Segredos. Nunca versionar valores.
+.env
+.env.*
+!.env.example
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Dependências e saídas comuns. Este repositório ainda não gera nenhuma.
+node_modules/
+dist/
+coverage/
+__pycache__/
+*.pyc
